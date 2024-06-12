@@ -39,4 +39,13 @@ window.addEventListener("scroll", () => {
 }, { passive: true });
 //#endregion
 
+//#region Carousel control
+let flkty = new Flickity('.mobile-carousel', {
+    wrapAround: true,
+    prevNextButtons: false,
+    pageDots: false,
+    autoPlay: true
+});
+//#endregion
+
 document.querySelector('#scrollToTop').addEventListener("click", () => window.scroll({ top: 0, behavior: "smooth" }));

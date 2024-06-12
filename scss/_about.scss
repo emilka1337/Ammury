@@ -5,6 +5,7 @@
 
         .section-name {
             @include sectionName;
+            margin-bottom: 50px;
         }
 
         .card {
@@ -14,37 +15,86 @@
                 width: 50%;
                 position: relative;
 
-                img:nth-child(1) {
+                img.paw {
                     position: absolute;
                     z-index: -1;
                     top: -60px;
                     left: 0px;
                 }
 
-                img:nth-child(2) {
+                img.phone {
                     transform: scale(0.9);
                     margin-left: 160px;
                 }
-             }
+            }
 
             .text {
                 width: 50%;
+                padding-top: 50px;
 
                 h3 {
-                    font-size: 26px;
+                    font-size: 28px;
                 }
 
                 p {
-                    color: #8C939D;
+                    color: #8c939d;
+                    width: 80%;
                 }
             }
 
             &:nth-child(2n) {
                 flex-direction: row-reverse;
+                text-align: right;
+
+                .text p {
+                    margin-left: auto;
+                }
 
                 .image-container img {
                     transform: rotateY(180deg) scale(0.9);
                     left: 80px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            width: 95%;
+
+            // .section-name h2 {
+            //     margin-bottom: 0;
+            // }
+
+            .card {
+                flex-direction: column-reverse !important;
+
+                .image-container {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    img.paw {
+                        position: static;
+                        display: none;
+                    }
+
+                    img.phone {
+                        transform: none !important;
+                        margin: 0;
+                    }
+                }
+
+                .text {
+                    width: 100%;
+                    padding-top: 0;
+                    text-align: center;
+
+                    h3 {
+                        margin-top: 0;
+                    }
+
+                    p {
+                        width: 100%;
+                    }
                 }
             }
         }
