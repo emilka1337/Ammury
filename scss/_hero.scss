@@ -4,7 +4,7 @@
     background-position: 0px 20px;
 
     .hero-container {
-        max-width: 1200px;
+        width: 1200px;
         margin: auto;
         padding: 50px 0px;
 
@@ -41,7 +41,6 @@
         }
 
         .hero-bottom {
-
             .app-images {
                 padding: 30px 0px;
                 display: flex;
@@ -52,6 +51,10 @@
                 // img:nth-child(3) {
                 //     transform: scale(0.9);
                 // }
+            }
+
+            .mobile-carousel {
+                display: none;
             }
 
             .app-links {
@@ -66,9 +69,32 @@
         }
 
         @media screen and (max-width: 992px) {
+            width: 95%;
+
             .hero-top {
                 .paws {
                     display: none;
+                }
+            }
+
+            .app-images {
+                display: none !important;
+                padding-bottom: 0 !important;
+            }
+
+            .mobile-carousel {
+                width: 100%;
+                display: block !important;
+                padding: 20px 0px;
+
+                .carousel-cell {
+                    padding: 0px 40px;
+
+                    img {
+                        height: 600px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
         }
