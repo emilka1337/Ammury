@@ -45,7 +45,7 @@ header.non-transparent {
   background: #fff;
 }
 header .header-container {
-  width: 80%;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -262,4 +262,46 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   .hero .hero-container .hero-top .paws {
     display: none;
   }
+}
+
+.about .about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+.about .about-container .section-name {
+  font-size: 28px;
+  text-align: center;
+}
+.about .about-container .card {
+  display: flex;
+}
+.about .about-container .card .image-container {
+  width: 50%;
+  position: relative;
+}
+.about .about-container .card .image-container img:nth-child(1) {
+  position: absolute;
+  z-index: -1;
+  top: -60px;
+  left: 0px;
+}
+.about .about-container .card .image-container img:nth-child(2) {
+  transform: scale(0.9);
+  margin-left: 160px;
+}
+.about .about-container .card .text {
+  width: 50%;
+}
+.about .about-container .card .text h3 {
+  font-size: 26px;
+}
+.about .about-container .card .text p {
+  color: #8C939D;
+}
+.about .about-container .card:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.about .about-container .card:nth-child(2n) .image-container img {
+  transform: rotateY(180deg) scale(0.9);
+  left: 80px;
 }/*# sourceMappingURL=styles.css.map */

@@ -39,24 +39,4 @@ window.addEventListener("scroll", () => {
 }, { passive: true });
 //#endregion
 
-//#region // Setting up the carousel
-document.querySelectorAll('.project-carousel').forEach(elem => {
-    new Flickity(elem, {
-        "cellAlign": "left",
-        "contain": true,
-        "wrapAround": true,
-        "autoPlay": 3000,
-        "selectedAttraction": 0.005,
-        "friction": 0.15,
-        "imagesLoaded": true,
-        "arrowShape": {
-            x0: 10,
-            x1: 60, y1: 50,
-            x2: 65, y2: 45,
-            x3: 20
-        }
-    })
-});
-//#endregion
-
 document.querySelector('#scrollToTop').addEventListener("click", () => window.scroll({ top: 0, behavior: "smooth" }));
