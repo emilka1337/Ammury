@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, a {
+  color: #1A3B68;
+}
+
+::-webkit-scrollbar {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #88A565;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #88A565;
+}
+
+::selection {
+  color: #fff;
+  background: #88A565;
+}
+
+header {
+  width: 100%;
+}
+header.hidden {
+  top: -81.6px !important;
+}
+header.non-transparent {
+  background: #fff;
+}
+header .header-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-container h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+header .header-container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+header .header-container ul a,
+header .header-container ul button {
+  display: inline-block;
+  padding: 30px 15px;
+  text-decoration: none;
+  transition: 300ms;
+  background: transparent;
+  border: none;
+  color: #1A3B68;
+  cursor: pointer;
+}
+header .header-container ul a:hover,
+header .header-container ul button:hover {
+  color: #88A565;
+}
+header .header-container ul button svg {
+  position: relative;
+  top: 2px;
+}
+header .header-container .languages .show-languages-button {
+  display: inline-block;
+  padding: 30px 15px;
+  text-decoration: none;
+  transition: 300ms;
+  background: transparent;
+  border: none;
+  color: #1A3B68;
+  cursor: pointer;
+}
+header .header-container .languages .show-languages-button:hover {
+  color: #88A565;
+}
+header .header-container .languages .show-languages-button svg {
+  position: relative;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+}
+header .header-container .languages .languages-list {
+  flex-direction: column;
+  background: #eee;
+  box-shadow: 0px 0px 20px #eee;
+  position: absolute;
+  top: 60px;
+  height: 0;
+  overflow: hidden;
+  transition: 300ms;
+}
+header .header-container .languages .languages-list.show {
+  height: 108px;
+}
+header .header-container .languages .languages-list button {
+  display: block;
+  padding: 10px 25px;
+}
+header .header-container .navbar-toggler {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: 0;
+  width: 25px;
+  height: 21px;
+  background: transparent;
+}
+header .header-container .navbar-toggler .line {
+  width: 100%;
+  height: 2px;
+  background: #1A3B68;
+  position: relative;
+  transition: 400ms;
+}
+header .header-container .navbar-toggler.open .line:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9.5px;
+}
+header .header-container .navbar-toggler.open .line:nth-child(2) {
+  display: none;
+}
+header .header-container .navbar-toggler.open .line:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 9.5px;
+}
+@media screen and (max-width: 992px) {
+  header .header-container {
+    width: 100%;
+    flex-direction: row-reverse;
+    padding: 20px 10px !important;
+    position: relative;
+  }
+  header .header-container .logo {
+    display: none;
+  }
+  header .header-container ul {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms;
+    z-index: 100;
+    background: #fff;
+    height: 100vh;
+    padding-top: 40px;
+    will-change: left;
+  }
+  header .header-container ul.show {
+    left: 0 !important;
+  }
+  header .header-container ul a {
+    padding: 15px;
+    font-size: 20px;
+    color: #1A3B68;
+  }
+  header .header-container .languages {
+    position: absolute;
+    right: 10px;
+  }
+  header .header-container .show-languages-button {
+    padding-right: 0 !important;
+  }
+  header .header-container .show-languages-button svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  header .header-container .languages-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    flex-direction: row;
+    gap: 15px;
+    background: transparent;
+    box-shadow: none;
+  }
+  header .header-container .languages-list.show {
+    height: 150px !important;
+  }
+  header .header-container .navbar-toggler {
+    display: flex;
+    z-index: 200;
+  }
+}
+
+.hero {
+  background: url(../img/lines-1.png) no-repeat center;
+  background-size: cover;
+  background-position: 0px 20px;
+}
+.hero .hero-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0px;
+}
+.hero .hero-container .hero-top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hero .hero-container .hero-top .paws {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.hero .hero-container .hero-top .paws img {
+  width: 200px;
+}
+.hero .hero-container .hero-top .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .hero-container .hero-top .main img {
+  margin-bottom: 20px;
+}
+.hero .hero-container .hero-top .main p {
+  width: 400px;
+  text-align: center;
+  margin: 0;
+}
+.hero .hero-container .hero-bottom .app-images {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.hero .hero-container .hero-bottom .app-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.hero .hero-container .hero-bottom .app-links img {
+  width: 150px;
+}
+@media screen and (max-width: 992px) {
+  .hero .hero-container .hero-top .paws {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */

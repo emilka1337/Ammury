@@ -1,0 +1,201 @@
+header {
+    width: 100%;
+
+    &.hidden {
+        top: -81.6px !important;
+    }
+
+    &.non-transparent {
+        background: $siteBgColor;
+    }
+
+    .header-container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+
+            a,
+            button {
+                display: inline-block;
+                padding: 30px 15px;
+                text-decoration: none;
+                transition: 300ms;
+                background: transparent;
+                border: none;
+                color: $fontColor;
+                cursor: pointer;
+
+                &:hover {
+                    color: $accentColor;
+                }
+            }
+
+            button svg {
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .languages {
+            .show-languages-button {
+                display: inline-block;
+                padding: 30px 15px;
+                text-decoration: none;
+                transition: 300ms;
+                background: transparent;
+                border: none;
+                color: $fontColor;
+                cursor: pointer;
+
+                &:hover {
+                    color: $accentColor;
+                }
+
+                svg {
+                    position: relative;
+                    top: 2px;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .languages-list {
+                flex-direction: column;
+                background: $secondaryBgColor;
+                box-shadow: 0px 0px 20px $secondaryBgColor;
+                position: absolute;
+                top: 60px;
+                height: 0;
+                overflow: hidden;
+                transition: 300ms;
+
+                &.show {
+                    height: 108px;
+                }
+
+                button {
+                    display: block;
+                    padding: 10px 25px;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0;
+            border: 0;
+            width: 25px;
+            height: 21px;
+            background: transparent;
+
+            .line {
+                width: 100%;
+                height: 2px;
+                background: $fontColor;
+                position: relative;
+                transition: 400ms;
+            }
+
+            &.open {
+                .line:nth-child(1) {
+                    transform: rotate(45deg);
+                    top: 9.5px;
+                }
+                .line:nth-child(2) {
+                    display: none;
+                }
+                .line:nth-child(3) {
+                    transform: rotate(-45deg);
+                    bottom: 9.5px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            flex-direction: row-reverse;
+            padding: 20px 10px !important;
+            position: relative;
+
+            .logo {
+                display: none;
+            }
+
+            ul {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 500ms;
+                z-index: 100;
+                background: $siteBgColor;
+                height: 100vh;
+                padding-top: 40px;
+                will-change: left;
+
+                &.show {
+                    left: 0 !important;
+                }
+
+                a {
+                    padding: 15px;
+                    font-size: 20px;
+                    color: $fontColor;
+                }
+            }
+
+            .languages {
+                position: absolute;
+                right: 10px;
+            }
+
+            .show-languages-button {
+                padding-right: 0 !important;
+
+                svg {
+                    width: 22px !important;
+                    height: 22px !important;
+                }
+            }
+
+            .languages-list {
+                position: relative;
+                top: 0;
+                left: 0;
+                padding: 0;
+                flex-direction: row;
+                gap: 15px;
+                background: transparent;
+                box-shadow: none;
+
+                &.show {
+                    height: 150px !important;
+                }
+            }
+
+            .navbar-toggler {
+                display: flex;
+                z-index: 200;
+            }
+        }
+    }
+}

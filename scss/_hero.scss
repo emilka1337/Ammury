@@ -1,0 +1,76 @@
+.hero {
+    background: url(../img/lines-1.png) no-repeat center;
+    background-size: cover;
+    background-position: 0px 20px;
+
+    .hero-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 0px;
+
+        .hero-top {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            .paws {
+                position: absolute;
+                left: 20px;
+                top: 20px;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    width: 400px;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+
+        .hero-bottom {
+
+            .app-images {
+                padding: 30px 0px;
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+
+                // img:nth-child(1),
+                // img:nth-child(3) {
+                //     transform: scale(0.9);
+                // }
+            }
+
+            .app-links {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                img {
+                    width: 150px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .hero-top {
+                .paws {
+                    display: none;
+                }
+            }
+        }
+    }
+}
