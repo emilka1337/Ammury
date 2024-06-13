@@ -367,4 +367,43 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   .about .about-container .card .text p {
     width: 100%;
   }
+}
+
+section.contact-us {
+  padding: 50px 0px;
+}
+section.contact-us .section-name {
+  font-size: 28px;
+  text-align: center;
+}
+section.contact-us form.contact-form {
+  width: 600px;
+  margin: auto;
+}
+section.contact-us form.contact-form .form-row input,
+section.contact-us form.contact-form .form-row select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #b7b7b7;
+  border-radius: 10px;
+}
+section.contact-us form.contact-form .form-row:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+section.contact-us form.contact-form .form-row:nth-child(2) select {
+  width: 90px;
+}
+section.contact-us form.contact-form .form-row input[type=submit] {
+  background: #88A565;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  section.contact-us form.contact-form {
+    width: 90%;
+  }
 }/*# sourceMappingURL=styles.css.map */
