@@ -19,6 +19,14 @@ section.contact-us {
                 padding: 10px;
                 border: 1px solid #b7b7b7;
                 border-radius: 10px;
+
+                &::placeholder {
+                    transition: 300ms;
+                }
+
+                &:active::placeholder {
+                    transform: translateX(-100%);
+                }
             }
 
             &:nth-child(2) {
@@ -36,6 +44,14 @@ section.contact-us {
                 color: #fff;
                 font-size: 18px;
                 cursor: pointer;
+                border: 2px solid $accentColor;
+                transition: 300ms;
+
+                &:hover {
+                    background: #fff;
+                    color: $accentColor;
+                }
+
             }
 
             img {
