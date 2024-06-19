@@ -13,7 +13,8 @@ section.contact-us {
             position: relative;
 
             input,
-            select {
+            select,
+            textarea {
                 width: 100%;
                 margin-bottom: 30px;
                 padding: 10px;
@@ -51,7 +52,11 @@ section.contact-us {
                     background: #fff;
                     color: $accentColor;
                 }
+            }
 
+            textarea {
+                height: 200px;
+                font-family: "Inter", sans-serif;
             }
 
             img {
@@ -62,7 +67,7 @@ section.contact-us {
             }
         }
 
-        @media screen and (max-width: 992px){
+        @media screen and (max-width: 992px) {
             width: 90%;
         }
     }

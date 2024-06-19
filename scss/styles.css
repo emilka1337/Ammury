@@ -384,26 +384,29 @@ section.contact-us form.contact-form .form-row {
   position: relative;
 }
 section.contact-us form.contact-form .form-row input,
-section.contact-us form.contact-form .form-row select {
+section.contact-us form.contact-form .form-row select,
+section.contact-us form.contact-form .form-row textarea {
   width: 100%;
   margin-bottom: 30px;
   padding: 10px;
   border: 1px solid #b7b7b7;
   border-radius: 10px;
 }
-section.contact-us form.contact-form .form-row input::-moz-placeholder, section.contact-us form.contact-form .form-row select::-moz-placeholder {
+section.contact-us form.contact-form .form-row input::-moz-placeholder, section.contact-us form.contact-form .form-row select::-moz-placeholder, section.contact-us form.contact-form .form-row textarea::-moz-placeholder {
   -moz-transition: 300ms;
   transition: 300ms;
 }
 section.contact-us form.contact-form .form-row input::placeholder,
-section.contact-us form.contact-form .form-row select::placeholder {
+section.contact-us form.contact-form .form-row select::placeholder,
+section.contact-us form.contact-form .form-row textarea::placeholder {
   transition: 300ms;
 }
-section.contact-us form.contact-form .form-row input:active::-moz-placeholder, section.contact-us form.contact-form .form-row select:active::-moz-placeholder {
+section.contact-us form.contact-form .form-row input:active::-moz-placeholder, section.contact-us form.contact-form .form-row select:active::-moz-placeholder, section.contact-us form.contact-form .form-row textarea:active::-moz-placeholder {
   transform: translateX(-100%);
 }
 section.contact-us form.contact-form .form-row input:active::placeholder,
-section.contact-us form.contact-form .form-row select:active::placeholder {
+section.contact-us form.contact-form .form-row select:active::placeholder,
+section.contact-us form.contact-form .form-row textarea:active::placeholder {
   transform: translateX(-100%);
 }
 section.contact-us form.contact-form .form-row:nth-child(2) {
@@ -425,6 +428,10 @@ section.contact-us form.contact-form .form-row input[type=submit] {
 section.contact-us form.contact-form .form-row input[type=submit]:hover {
   background: #fff;
   color: #88A565;
+}
+section.contact-us form.contact-form .form-row textarea {
+  height: 200px;
+  font-family: "Inter", sans-serif;
 }
 section.contact-us form.contact-form .form-row img {
   position: absolute;
