@@ -3,7 +3,7 @@ const STATES = {        // This object contains states from the whole site
 }
 
 //#region Navbar toggling on mobile
-document.querySelector('.navbar-toggler').addEventListener("click", function() {
+document.querySelector('.navbar-toggler').addEventListener("click", function () {
     this.classList.toggle("open")
     document.querySelector('.navbar>ul').classList.toggle("show");
 });
@@ -45,6 +45,29 @@ let flkty = new Flickity('.mobile-carousel', {
     prevNextButtons: false,
     pageDots: false,
     autoPlay: true
+});
+//#endregion
+
+//#region EmailJS
+(function () {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init({
+        publicKey: "PTE175P7kpE9Z-tmI",
+    });
+})();
+
+document.querySelector('.contact-form').addEventListener("submit", (e) => {
+    e.preventDefault()
+    
+    let params = {
+        from_name: document.querySelector('#formName').value,
+        phone_number: document.querySelector('#operator_number').value + document.querySelector('#phone_number').value,
+        message: document.querySelector('#form-message').value
+    }
+
+    emailjs.send("service_pqg8ixq", "template_7dvelmi", params).then((response) => {
+        alert("Email sent successfully!")
+    });
 });
 //#endregion
 

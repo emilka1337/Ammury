@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ammury</title>
     <link rel="stylesheet" href="./scss/styles.css">
+    <!-- Flickity -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        
+    </script>
     <script defer src="./js/script.js"></script>
     <!-- <script defer src="./js/dictionary.js"></script>
     <script defer src="./js/translation.js"></script> -->
@@ -135,30 +141,25 @@
         </div>
         <form class="contact-form">
             <div class="form-row">
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" id="formName">
                 <img src="./img/svg/Group.svg" alt="">
             </div>
             <div class="form-row">
-                <select name="" id="">
+                <select value="055" id="operator_number">
                     <option value="050">050</option>
                     <option value="050">051</option>
                     <option value="050">055</option>
                     <option value="050">070</option>
                     <option value="050">077</option>
                 </select>
-                <input type="tel" placeholder="Mobile number">
+                <input type="tel" placeholder="Mobile number" id="phone_number">
                 <img src="./img/svg/Vector.svg" alt="">
             </div>
             <div class="form-row">
-                <input type="password" placeholder="Password">
-                <img src="./img/svg/Vector (1).svg" alt="">
-                </div>
-                <div class="form-row">
-                    <input type="password" placeholder="Repeat password">
-                    <img src="./img/svg/Vector (1).svg" alt="">
+                <textarea id="form-message" placeholder="Write your message..."></textarea>
             </div>
             <div class="form-row">
-                <input type="submit" value="Create Account">
+                <input type="submit" value="Send">
             </div>
         </form>
     </section>
