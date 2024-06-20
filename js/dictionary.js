@@ -1,9 +1,9 @@
 const DICTIONARY = {
     en: [
         "Home",
-        "About Me",
-        "Projects",
-        "Hello",
+        "About Us",
+        "Contact Us",
+        "Download",
         "I'm Emil",
         "Frontend developer",
         "My resume",

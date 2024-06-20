@@ -15,8 +15,4 @@ function changeLanguage(selectedLang) {
     }
 }
 
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-changeLanguage(localStorage.getItem("language") || DICTIONARY[navigator.language.substring(0, 2)] || "en");
+// changeLanguage(localStorage.getItem("language") || DICTIONARY[navigator.language.substring(0, 2)] || "en");

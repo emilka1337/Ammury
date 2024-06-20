@@ -55,7 +55,9 @@ let flkty = new Flickity('.mobile-carousel', {
         publicKey: "PTE175P7kpE9Z-tmI",
     });
 })();
+//#endregion
 
+//#region 
 document.querySelector('.contact-form').addEventListener("submit", (e) => {
     e.preventDefault()
     
@@ -66,8 +68,21 @@ document.querySelector('.contact-form').addEventListener("submit", (e) => {
     }
 
     emailjs.send("service_pqg8ixq", "template_7dvelmi", params).then((response) => {
-        alert("Email sent successfully!")
+        alert("Email sent successfully!") 
+        document.querySelector('#formName').value = ""
+        document.querySelector('#phone_number').value = ""
+        document.querySelector('#form-message').value = ""
+
+        document.querySelector('.form-alert-container').classList.add("show")
     });
+});
+
+document.querySelectorAll('.close-form-alert').forEach(item => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        document.querySelector('.form-alert-container').classList.remove("show")
+    })
 });
 //#endregion
 
