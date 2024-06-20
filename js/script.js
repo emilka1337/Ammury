@@ -66,7 +66,10 @@ document.querySelector('.contact-form').addEventListener("submit", (e) => {
     }
 
     emailjs.send("service_pqg8ixq", "template_7dvelmi", params).then((response) => {
-        alert("Email sent successfully!")
+        alert("Email sent successfully!") 
+        document.querySelector('#formName').value = ""
+        document.querySelector('#phone_number').value = ""
+        document.querySelector('#form-message').value = ""
     });
 });
 //#endregion
