@@ -34,7 +34,7 @@
                 }
 
                 p {
-                    width: 400px;
+                    width: 800px;
                     text-align: center;
                     margin: 0;
                 }
@@ -75,6 +75,10 @@
             .hero-top {
                 .paws {
                     display: none;
+                }
+
+                p {
+                    width: 100% !important;
                 }
             }
 

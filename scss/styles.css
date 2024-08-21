@@ -111,7 +111,7 @@ header .header-container .languages .languages-list {
   transition: 300ms;
 }
 header .header-container .languages .languages-list.show {
-  height: 108px;
+  height: 72px;
 }
 header .header-container .languages .languages-list button {
   display: block;
@@ -241,7 +241,7 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   width: 200px;
 }
 .hero .hero-container .hero-top .main p {
-  width: 400px;
+  width: 800px;
   text-align: center;
   margin: 0;
 }
@@ -268,6 +268,9 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   }
   .hero .hero-container .hero-top .paws {
     display: none;
+  }
+  .hero .hero-container .hero-top p {
+    width: 100% !important;
   }
   .hero .hero-container .app-images {
     display: none !important;
@@ -462,7 +465,7 @@ section.contact-us .form-alert-container.form-alert-container {
   display: none;
 }
 section.contact-us .form-alert-container.form-alert-container .form-alert {
-  width: 800px;
+  width: 400px;
   background: #fff;
   padding: 20px;
   display: flex;
@@ -477,11 +480,17 @@ section.contact-us .form-alert-container.form-alert-container .form-alert svg {
 section.contact-us .form-alert-container.form-alert-container .form-alert.form-success-alert {
   display: none;
 }
+section.contact-us .form-alert-container.form-alert-container .form-alert.form-success-alert.show {
+  display: block !important;
+}
 section.contact-us .form-alert-container.form-alert-container .form-alert.form-success-alert svg {
   color: green;
 }
 section.contact-us .form-alert-container.form-alert-container .form-alert.form-error-alert {
   display: none;
+}
+section.contact-us .form-alert-container.form-alert-container .form-alert.form-error-alert.show {
+  display: block !important;
 }
 section.contact-us .form-alert-container.form-alert-container .form-alert.form-error-alert svg {
   color: red;
@@ -571,6 +580,7 @@ footer .links ul {
   padding: 0;
   list-style: none;
   width: 33.3333333333%;
+  text-align: center;
 }
 footer .links ul li {
   display: flex;

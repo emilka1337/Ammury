@@ -57,24 +57,29 @@ let flkty = new Flickity('.mobile-carousel', {
 })();
 //#endregion
 
-//#region 
+//#region Contact form
 document.querySelector('.contact-form').addEventListener("submit", (e) => {
     e.preventDefault()
-    
+
     let params = {
         from_name: document.querySelector('#formName').value,
         phone_number: document.querySelector('#operator_number').value + document.querySelector('#phone_number').value,
         message: document.querySelector('#form-message').value
     }
 
-    emailjs.send("service_pqg8ixq", "template_7dvelmi", params).then((response) => {
-        alert("Email sent successfully!") 
-        document.querySelector('#formName').value = ""
-        document.querySelector('#phone_number').value = ""
-        document.querySelector('#form-message').value = ""
+    emailjs.send("service_pqg8ixq", "template_7dvelmi", params).then(
+        (resolve) => {
+            document.querySelector('.form-success-alert').classList.add("show")
+        },
+        (reject) => {
+            document.querySelector('.form-error-alert').classList.add("show")
+        }
+    ).finally(() => document.querySelector('.form-alert-container').classList.add("show"));
 
-        document.querySelector('.form-alert-container').classList.add("show")
-    });
+    // Form cleaning after submit
+    document.querySelector('#formName').value = ""
+    document.querySelector('#phone_number').value = ""
+    document.querySelector('#form-message').value = ""
 });
 
 document.querySelectorAll('.close-form-alert').forEach(item => {
@@ -82,6 +87,8 @@ document.querySelectorAll('.close-form-alert').forEach(item => {
         e.preventDefault()
 
         document.querySelector('.form-alert-container').classList.remove("show")
+        document.querySelector('.form-success-alert').classList.remove("show")
+        document.querySelector('.form-error-alert').classList.remove("show")
     })
 });
 //#endregion
