@@ -251,6 +251,9 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   justify-content: center;
   gap: 40px;
 }
+.hero .hero-container .hero-bottom .app-images img {
+  width: 300px;
+}
 .hero .hero-container .hero-bottom .mobile-carousel {
   display: none;
 }
@@ -285,7 +288,6 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
     padding: 0px 40px;
   }
   .hero .hero-container .mobile-carousel .carousel-cell img {
-    height: 600px;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -317,6 +319,7 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
 .about .about-container .card .image-container img.phone {
   transform: scale(0.9);
   margin-left: 160px;
+  width: 300px;
 }
 .about .about-container .card .text {
   width: 50%;

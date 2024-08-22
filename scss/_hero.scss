@@ -52,6 +52,9 @@
                 // img:nth-child(3) {
                 //     transform: scale(0.9);
                 // }
+                img {
+                    width: 300px;
+                }
             }
 
             .mobile-carousel {
@@ -96,7 +99,7 @@
                     padding: 0px 40px;
 
                     img {
-                        height: 600px;
+                        // height: 600px;
                         width: 100%;
                         object-fit: cover;
                     }

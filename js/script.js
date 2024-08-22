@@ -63,7 +63,7 @@ document.querySelector('.contact-form').addEventListener("submit", (e) => {
 
     let params = {
         from_name: document.querySelector('#formName').value,
-        phone_number: document.querySelector('#operator_number').value + document.querySelector('#phone_number').value,
+        phone_number: document.querySelector('#country_code').value + document.querySelector('#phone_number').value,
         message: document.querySelector('#form-message').value
     }
 
