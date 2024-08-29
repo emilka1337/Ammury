@@ -243,7 +243,7 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
 .hero .hero-container .hero-top .main p {
   width: 800px;
   text-align: center;
-  margin: 0;
+  margin: 30px 0px;
 }
 .hero .hero-container .hero-bottom .app-images {
   padding: 30px 0px;
@@ -339,7 +339,7 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
 .about .about-container .card:nth-child(2n) .text p {
   margin-left: auto;
 }
-.about .about-container .card:nth-child(2n) .image-container img {
+.about .about-container .card:nth-child(2n) .image-container img.paw {
   transform: rotateY(180deg) scale(0.9);
   left: 80px;
 }
@@ -528,6 +528,7 @@ section.contact-us .form-alert-container.form-alert-container.show .form-alert {
 .download .download-container {
   width: 1200px;
   margin: auto;
+  padding-bottom: 100px;
   display: flex;
 }
 .download .download-container .left {
@@ -539,18 +540,24 @@ section.contact-us .form-alert-container.form-alert-container.show .form-alert {
 .download .download-container .left h2 {
   font-size: 42px;
 }
+.download .download-container .left .app-links img {
+  width: 200px;
+}
 .download .download-container .right {
   width: 50%;
   position: relative;
 }
-.download .download-container .right img {
-  max-width: 100%;
+.download .download-container .right .phone {
+  width: 50%;
+  position: relative;
+  left: 50%;
 }
-.download .download-container .right img:nth-child(2) {
+.download .download-container .right .paw {
   position: absolute;
-  top: 20px;
-  right: 0;
+  top: -100px;
+  right: -280px;
   z-index: -1;
+  transform: scale(0.7);
 }
 @media screen and (max-width: 992px) {
   .download .download-container {
@@ -616,7 +623,7 @@ footer .links ul img {
   }
 }
 footer .copyright {
-  background: #000;
+  background: #000F37;
   text-align: center;
   padding: 20px 0px;
 }
