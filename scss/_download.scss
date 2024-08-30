@@ -16,8 +16,11 @@
             }
 
             .app-links {
+                display: flex;
+                gap: 10px;
+
                 img {
-                    width: 200px;
+                    width: 180px;
                 }
             }
         }
@@ -53,9 +56,13 @@
                 text-align: center;
                 padding-bottom: 40px;
 
-                a {
-                    display: inline-block;
-                    margin-bottom: 20px;
+                .app-links {
+                    justify-content: center;
+                    
+                    a {
+                        display: inline-block;
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }

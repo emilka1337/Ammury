@@ -19,10 +19,12 @@ h1, h2, h3, h4, h5, h6, p, label, a {
 
 ::-webkit-scrollbar {
   background: #eee;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #88A565;
+  border-radius: 3px;
 }
 
 ::-moz-selection {
@@ -540,8 +542,12 @@ section.contact-us .form-alert-container.form-alert-container.show .form-alert {
 .download .download-container .left h2 {
   font-size: 42px;
 }
+.download .download-container .left .app-links {
+  display: flex;
+  gap: 10px;
+}
 .download .download-container .left .app-links img {
-  width: 200px;
+  width: 180px;
 }
 .download .download-container .right {
   width: 50%;
@@ -571,7 +577,10 @@ section.contact-us .form-alert-container.form-alert-container.show .form-alert {
     text-align: center;
     padding-bottom: 40px;
   }
-  .download .download-container .left a {
+  .download .download-container .left .app-links {
+    justify-content: center;
+  }
+  .download .download-container .left .app-links a {
     display: inline-block;
     margin-bottom: 20px;
   }
