@@ -56,13 +56,24 @@
                 // img:nth-child(3) {
                 //     transform: scale(0.9);
                 // }
+                
                 img {
                     width: 200px;
                 }
             }
-
+            
             .mobile-carousel {
                 display: none;
+
+                .carousel-cell {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 300px;
+                    }
+                }
             }
 
             .app-links {

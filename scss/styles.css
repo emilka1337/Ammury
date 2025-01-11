@@ -262,6 +262,14 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
 .hero .hero-container .hero-bottom .mobile-carousel {
   display: none;
 }
+.hero .hero-container .hero-bottom .mobile-carousel .carousel-cell {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero .hero-container .hero-bottom .mobile-carousel .carousel-cell img {
+  width: 300px;
+}
 .hero .hero-container .hero-bottom .app-links {
   display: flex;
   justify-content: center;
