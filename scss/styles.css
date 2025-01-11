@@ -238,8 +238,11 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   flex-direction: column;
   align-items: center;
 }
-.hero .hero-container .hero-top .main img {
-  margin-bottom: 20px;
+.hero .hero-container .hero-top .main .logo {
+  width: 150px;
+  margin-bottom: 40px;
+}
+.hero .hero-container .hero-top .main .ammury {
   width: 200px;
 }
 .hero .hero-container .hero-top .main p {
@@ -254,7 +257,7 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   gap: 40px;
 }
 .hero .hero-container .hero-bottom .app-images img {
-  width: 300px;
+  width: 200px;
 }
 .hero .hero-container .hero-bottom .mobile-carousel {
   display: none;
@@ -265,7 +268,7 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
   gap: 20px;
 }
 .hero .hero-container .hero-bottom .app-links img {
-  width: 150px;
+  width: 200px;
 }
 @media screen and (max-width: 992px) {
   .hero .hero-container {
